@@ -38,22 +38,6 @@
       </div>
     </section>
 
-    <h2 id="gallery" class="future_title">Our Recent Photos</h2>
-  <div class="lightbox">
-    <div class="wrapper">
-      <header>
-        <div class="details">
-          <i class="uil uil-camera"></i>
-          <span>Image Preview</span>
-        </div>
-        <div class="buttons"><i class="close-icon uil uil-times"></i></div>
-      </header>
-      <div class="preview-img">
-        <div class="img"><img src="" class="lazy" alt="preview-img" /></div>
-      </div>
-    </div>
-  </div>
-
   <Gallery/>
   </template>
   
