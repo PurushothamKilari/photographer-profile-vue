@@ -37,13 +37,78 @@
         </div>
       </div>
     </section>
+
+    <h2 id="gallery" class="future_title">Our Recent Photos</h2>
+  <div class="lightbox">
+    <div class="wrapper">
+      <header>
+        <div class="details">
+          <i class="uil uil-camera"></i>
+          <span>Image Preview</span>
+        </div>
+        <div class="buttons"><i class="close-icon uil uil-times"></i></div>
+      </header>
+      <div class="preview-img">
+        <div class="img"><img src="" class="lazy" alt="preview-img" /></div>
+      </div>
+    </div>
+  </div>
+
+  <Gallery/>
   </template>
   
   <script setup>
+import Gallery from './Gallery.vue';
+
   
   </script>
   
   <style scoped>
+
+.lightbox {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  position: fixed;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.lightbox.show {
+  visibility: visible;
+}
+
+.lightbox .wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  padding: 20px;
+  max-width: 850px;
+  background: #fff;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 0.1s ease;
+}
+
+.lightbox.show .wrapper {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.wrapper :where(header, .details) {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper header {
+  justify-content: space-between;
+}
  /* Course */
 
 .course {
